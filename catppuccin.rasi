@@ -1,0 +1,85 @@
+configuration {
+display-drun: "";
+display-window: "";
+drun-display-format: "{name}";
+font: "Victor Mono SemiBold 9";
+location: 0;
+modi: "window,drun,run";
+show-icons: false;
+sidebar-mode: false;
+xoffset: 0;
+yoffset: 0;
+}
+@theme "/dev/null"
+
+* {
+background-color: @bg;
+bg: #1E1E28;
+button: #1A1826;
+fg: #D7DAE0;
+text-color: @fg;
+}
+
+element {
+border-radius: 0%;
+orientation: vertical;
+padding: 1.5% 0% 1.5% 1.5%;
+}
+
+element selected {
+background-color: #F5E0DC;
+border-radius: 6px;
+text-color: @bg;
+}
+
+element-text {
+background-color: inherit;
+expand: true;
+margin: 0.5% 3% 0% 3%;
+text-color: inherit;
+vertical-align: 0.5;
+}
+
+entry {
+background-color: @button;
+expand: true;
+padding: 5px 2% 5px 2%;
+placeholder: "Search";
+placeholder-color: @fg;
+}
+
+inputbar {
+background-color: @button;
+border-radius: 6px;
+children: [ prompt,entry ];
+expand: false;
+padding: 8px;
+text-color: @fg;
+}
+
+listview {
+columns: 1;
+cycle: false;
+dynamic: true;
+layout: vertical;
+lines: 8;
+}
+
+mainbox {
+children: [ inputbar,listview ];
+padding: 2% 1% 2% 1%;
+spacing: 2%;
+}
+
+prompt {
+enabled: false;
+}
+
+window {
+location: south;
+padding: 20px;
+transparency: "real";
+width: 40%;
+y-offset: 10px;
+}
+
